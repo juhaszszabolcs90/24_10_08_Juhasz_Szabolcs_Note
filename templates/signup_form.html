@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regisztrációs Űrlap</title>
+</head>
+<body>
+    <h1>Felhasználói Regisztráció</h1>
+    <form action="{{ url_for('signup') }}" method="post">
+        <label for="fullname">Teljes név:</label>
+        <input type="text" id="fullname" name="fullname" required><br><br>
+
+        <label for="email">Email cím:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="password">Jelszó:</label>
+        <input type="password" id="password" name="password" required><br><br>
+
+        <label for="phone">Telefonszám:</label>
+        <input type="tel" id="phone" name="phone"><br><br>
+
+        <label for="birthdate">Születési dátum:</label>
+        <input type="date" id="birthdate" name="birthdate"><br><br>
+
+        <label>Nem:</label><br>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Férfi</label><br>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Nő</label><br>
+        <input type="radio" id="other" name="gender" value="other">
+        <label for="other">Egyéb</label><br><br>
+
+        <label for="interest">Érdeklődési szint (1-100):</label>
+        <input type="range" id="interest" name="interest" min="1" max="100" value="50"><br><br>
+
+        <label for="color">Kedvenc szín:</label>
+        <input type="color" id="color" name="color"><br><br>
+
+        <label for="profile-pic">Profilkép feltöltése:</label>
+        <input type="file" id="profile-pic" name="profile-pic"><br><br>
+
+        <label for="fav-time">Kedvenc időpont:</label>
+        <input type="time" id="fav-time" name="fav-time"><br><br>
+
+        <button type="submit">Regisztráció</button>
+    </form>
+
+</body>
+</html>
