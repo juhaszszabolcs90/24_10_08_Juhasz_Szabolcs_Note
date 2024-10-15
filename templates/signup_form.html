@@ -47,11 +47,6 @@
         <button type="submit">Regisztráció</button>
     </form>
 
-    <script>
-        // A csúszka értékének frissítése valós időben
-        function updateValue(value) {
-            document.getElementById('rangeValue').textContent = value;
-        }
-    </script>
+    <script src="{{ url_for('static', filename='js/signup_form.js') }}"></script>
 </body>
 </html>
