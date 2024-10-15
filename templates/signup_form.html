@@ -32,7 +32,8 @@
         <label for="other">Egyéb</label><br><br>
 
         <label for="interest">Érdeklődési szint (1-100):</label>
-        <input type="range" id="interest" name="interest" min="1" max="100" value="50"><br><br>
+        <input type="range" id="interest" name="interest" min="1" max="100" oninput="updateValue(this.value)">
+        <span id="rangeValue">50</span><br><br>
 
         <label for="color">Kedvenc szín:</label>
         <input type="color" id="color" name="color"><br><br>
@@ -46,5 +47,11 @@
         <button type="submit">Regisztráció</button>
     </form>
 
+    <script>
+        // A csúszka értékének frissítése valós időben
+        function updateValue(value) {
+            document.getElementById('rangeValue').textContent = value;
+        }
+    </script>
 </body>
 </html>
