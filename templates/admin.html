@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Felület</title>
+</head>
+<body>
+    <h1>Admin Felület</h1>
+    <h2>Regisztrált Felhasználók</h2>
+    {% if users %}
+        <ul>
+            {% for user in users %}
+                <li>
+                    <strong>Név:</strong> {{ user['fullname'] }}<br>
+                    <strong>Email:</strong> {{ user['email'] }}<br>
+                    <strong>Telefonszám:</strong> {{ user['phone'] }}<br>
+                    <strong>Születési dátum:</strong> {{ user['birthdate'] }}<br>
+                    <strong>Nem:</strong> {{ user['gender'] }}<br>
+                    <strong>Érdeklődési szint:</strong> {{ user['interest'] }}<br>
+                    <strong>Kedvenc szín:</strong> {{ user['color'] }}<br>
+                    <strong>Kedvenc időpont:</strong> {{ user['fav_time'] }}<br>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>Nincs regisztrált felhasználó.</p>
+    {% endif %}
+</body>
+</html>
